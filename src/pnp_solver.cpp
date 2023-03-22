@@ -85,7 +85,7 @@ class PnPSolver{
 												 r(3), r(4), r(5), t(1),
 												 r(6), r(7), r(8), t(2), 
 												 0,    0,    0,    1).finished();
-	} 
+	}    
 	
 	private:
 	void normalize_point_2D(){

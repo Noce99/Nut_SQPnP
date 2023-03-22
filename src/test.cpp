@@ -33,7 +33,7 @@ int main(){
 	std::cout << "I have " << points_3D.size() << " 3D points, " << points_2D.size() << " 2D points and a (" << K.rows() << ", " << K.cols() << ") K" << std::endl;
 	PnPSolver PnP = PnPSolver(points_3D, points_2D, K);
 	if (PnP.Solve()){
-		std::cout << "Best solution found:" << std::endl;
+		std::cout << "Best solution found:" << std::endl;  
 		std::cout << PnP.get_best_solution() << std::endl;
 	}
 }
