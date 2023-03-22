@@ -1,6 +1,0 @@
-/home/enrico/Progetti/NutPnP/build/CMakeFiles/edit_cache.dir
-/home/enrico/Progetti/NutPnP/build/CMakeFiles/rebuild_cache.dir
-/home/enrico/Progetti/NutPnP/build/src/CMakeFiles/SQPnP.dir
-/home/enrico/Progetti/NutPnP/build/src/CMakeFiles/test.dir
-/home/enrico/Progetti/NutPnP/build/src/CMakeFiles/edit_cache.dir
-/home/enrico/Progetti/NutPnP/build/src/CMakeFiles/rebuild_cache.dir
