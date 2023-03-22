@@ -16,4 +16,4 @@ set(sources test.cpp )
 add_executable(test ${sources})
 
 # when other libraries or executables link to SQPnP
-target_include_directories (SQPnP PUBLIC ${INCLUDE_DIRS})
+target_include_directories (SQPnP PUBLIC ${INCLUDE_DIRS}) 
