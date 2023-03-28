@@ -89,31 +89,28 @@ class PnPSolver{
 	
 	private:
 	void normalize_point_2D(){
-		normalized_points_2D.reserve(num_of_points);
 		Eigen::Matrix<double, 3, 3> inv_K = K.inverse();
 		for (int i=0; i<num_of_points; i++){
 			Eigen::Matrix<double, 3, 1> omogenized_point = (Eigen::Matrix<double, 3, 1>() << points_2D[i](0), points_2D[i](1), 1).finished();
 			Eigen::Matrix<double, 3, 1> omogenized_normalized_point = inv_K * omogenized_point;
-			normalized_points_2D[i] = (Eigen::Matrix<double, 2, 1>() << omogenized_normalized_point(0), omogenized_normalized_point(1)).finished();
+			normalized_points_2D.push_back((Eigen::Matrix<double, 2, 1>() << omogenized_normalized_point(0), omogenized_normalized_point(1)).finished());
 		}
 	}
 	
 	void computeAi(){
-		Ai.reserve(num_of_points);
 		for (int i=0; i<num_of_points; i++){
-			Ai[i] = (Eigen::Matrix<double, 3, 9>() <<  points_3D[i](0), points_3D[i](1), points_3D[i](2), 0, 0, 0, 0, 0, 0,
+			Ai.push_back((Eigen::Matrix<double, 3, 9>() <<  points_3D[i](0), points_3D[i](1), points_3D[i](2), 0, 0, 0, 0, 0, 0,
 													   0, 0, 0, points_3D[i](0), points_3D[i](1), points_3D[i](2), 0, 0, 0,
-													   0, 0, 0, 0, 0, 0, points_3D[i](0), points_3D[i](1), points_3D[i](2)).finished();
+													   0, 0, 0, 0, 0, 0, points_3D[i](0), points_3D[i](1), points_3D[i](2)).finished());
 		}
 	}
 	
 	void computeQi(){
-		Qi.reserve(num_of_points);
 		for (int i=0; i<num_of_points; i++){
 			Eigen::Matrix<double, 3, 3> tmp = (Eigen::Matrix<double, 3, 3>() << -1, 0, normalized_points_2D[i][0],
 																				0, -1, normalized_points_2D[i][1],
 																				0,  0,                          0).finished();
-			Qi[i] = tmp.transpose() * tmp;
+			Qi.push_back(tmp.transpose() * tmp);
 		}
 	}
 	
@@ -149,18 +146,17 @@ class PnPSolver{
 	}
 	
 	void computeNullSpaceSize(){
-		for (int i=num_of_points; i>=0; i--){
-			if (svd_singular_values[i] > MAX_SINGULAR_VALUE_TO_BEING_NULL){
-				null_space_size = num_of_points - i;
+		for (int i=svd_U.cols()-1; i>=0; i--){
+			if (svd_singular_values(i) > MAX_SINGULAR_VALUE_TO_BEING_NULL){
+				null_space_size = svd_U.cols() - i;
 				break;
 			}
 		}
 	}
 	
 	void computeEigenVector(){
-		eigen_vectors.reserve(num_of_points);
-		for (int i=1; i<num_of_points; i++){
-			eigen_vectors[i] = svd_U.col(i);
+		for (int i=0; i<svd_U.cols(); i++){
+			eigen_vectors.push_back(svd_U.col(i));
 		}
 	}
 
@@ -230,7 +226,10 @@ class PnPSolver{
 	}
 	
 	bool checkSolutions(){
+		std::cout << "Find out " << solution_error.size() << " solutions!" << std::endl;
+		std::cout << "Errors: " << std::endl;
 		for (int i=0; i<solution_error.size(); i++){
+			std::cout << solution_error[i] << std::endl;
 			if (solution_error[i] <= SOLUTION_TOLLERANCE){
 				return true;
 			}

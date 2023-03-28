@@ -1,0 +1,9 @@
+/home/enrico/Progetti/Nut_SQPnP/build/CMakeFiles/edit_cache.dir
+/home/enrico/Progetti/Nut_SQPnP/build/CMakeFiles/rebuild_cache.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/SQPnP.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/test.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/create_marker.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/read_markers.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/pnp.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/edit_cache.dir
+/home/enrico/Progetti/Nut_SQPnP/build/src/CMakeFiles/rebuild_cache.dir

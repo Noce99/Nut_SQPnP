@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSQPnP.a CMakeFiles/SQPnP.dir/pnp_solver.cpp.o
+/usr/bin/ranlib libSQPnP.a
