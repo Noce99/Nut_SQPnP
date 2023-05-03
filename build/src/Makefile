@@ -131,20 +131,6 @@ SQPnP/fast:
 .PHONY : SQPnP/fast
 
 # Convenience name for target.
-src/CMakeFiles/test.dir/rule:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test.dir/rule
-.PHONY : src/CMakeFiles/test.dir/rule
-
-# Convenience name for target.
-test: src/CMakeFiles/test.dir/rule
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-# Convenience name for target.
 src/CMakeFiles/create_marker.dir/rule:
 	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/create_marker.dir/rule
 .PHONY : src/CMakeFiles/create_marker.dir/rule
@@ -159,32 +145,18 @@ create_marker/fast:
 .PHONY : create_marker/fast
 
 # Convenience name for target.
-src/CMakeFiles/read_markers.dir/rule:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/read_markers.dir/rule
-.PHONY : src/CMakeFiles/read_markers.dir/rule
+src/CMakeFiles/pnp_photo.dir/rule:
+	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/pnp_photo.dir/rule
+.PHONY : src/CMakeFiles/pnp_photo.dir/rule
 
 # Convenience name for target.
-read_markers: src/CMakeFiles/read_markers.dir/rule
-.PHONY : read_markers
+pnp_photo: src/CMakeFiles/pnp_photo.dir/rule
+.PHONY : pnp_photo
 
 # fast build rule for target.
-read_markers/fast:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/read_markers.dir/build.make src/CMakeFiles/read_markers.dir/build
-.PHONY : read_markers/fast
-
-# Convenience name for target.
-src/CMakeFiles/pnp.dir/rule:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/pnp.dir/rule
-.PHONY : src/CMakeFiles/pnp.dir/rule
-
-# Convenience name for target.
-pnp: src/CMakeFiles/pnp.dir/rule
-.PHONY : pnp
-
-# fast build rule for target.
-pnp/fast:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp.dir/build.make src/CMakeFiles/pnp.dir/build
-.PHONY : pnp/fast
+pnp_photo/fast:
+	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp_photo.dir/build.make src/CMakeFiles/pnp_photo.dir/build
+.PHONY : pnp_photo/fast
 
 # Convenience name for target.
 src/CMakeFiles/pnp_video.dir/rule:
@@ -200,29 +172,29 @@ pnp_video/fast:
 	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp_video.dir/build.make src/CMakeFiles/pnp_video.dir/build
 .PHONY : pnp_video/fast
 
-PnP.o: PnP.cpp.o
-.PHONY : PnP.o
+PnP_photo.o: PnP_photo.cpp.o
+.PHONY : PnP_photo.o
 
 # target to build an object file
-PnP.cpp.o:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp.dir/build.make src/CMakeFiles/pnp.dir/PnP.cpp.o
-.PHONY : PnP.cpp.o
+PnP_photo.cpp.o:
+	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp_photo.dir/build.make src/CMakeFiles/pnp_photo.dir/PnP_photo.cpp.o
+.PHONY : PnP_photo.cpp.o
 
-PnP.i: PnP.cpp.i
-.PHONY : PnP.i
+PnP_photo.i: PnP_photo.cpp.i
+.PHONY : PnP_photo.i
 
 # target to preprocess a source file
-PnP.cpp.i:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp.dir/build.make src/CMakeFiles/pnp.dir/PnP.cpp.i
-.PHONY : PnP.cpp.i
+PnP_photo.cpp.i:
+	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp_photo.dir/build.make src/CMakeFiles/pnp_photo.dir/PnP_photo.cpp.i
+.PHONY : PnP_photo.cpp.i
 
-PnP.s: PnP.cpp.s
-.PHONY : PnP.s
+PnP_photo.s: PnP_photo.cpp.s
+.PHONY : PnP_photo.s
 
 # target to generate assembly for a file
-PnP.cpp.s:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp.dir/build.make src/CMakeFiles/pnp.dir/PnP.cpp.s
-.PHONY : PnP.cpp.s
+PnP_photo.cpp.s:
+	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp_photo.dir/build.make src/CMakeFiles/pnp_photo.dir/PnP_photo.cpp.s
+.PHONY : PnP_photo.cpp.s
 
 PnP_video.o: PnP_video.cpp.o
 .PHONY : PnP_video.o
@@ -296,54 +268,6 @@ pnp_solver.cpp.s:
 	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/SQPnP.dir/build.make src/CMakeFiles/SQPnP.dir/pnp_solver.cpp.s
 .PHONY : pnp_solver.cpp.s
 
-read_markers.o: read_markers.cpp.o
-.PHONY : read_markers.o
-
-# target to build an object file
-read_markers.cpp.o:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/read_markers.dir/build.make src/CMakeFiles/read_markers.dir/read_markers.cpp.o
-.PHONY : read_markers.cpp.o
-
-read_markers.i: read_markers.cpp.i
-.PHONY : read_markers.i
-
-# target to preprocess a source file
-read_markers.cpp.i:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/read_markers.dir/build.make src/CMakeFiles/read_markers.dir/read_markers.cpp.i
-.PHONY : read_markers.cpp.i
-
-read_markers.s: read_markers.cpp.s
-.PHONY : read_markers.s
-
-# target to generate assembly for a file
-read_markers.cpp.s:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/read_markers.dir/build.make src/CMakeFiles/read_markers.dir/read_markers.cpp.s
-.PHONY : read_markers.cpp.s
-
-test.o: test.cpp.o
-.PHONY : test.o
-
-# target to build an object file
-test.cpp.o:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/test.cpp.o
-.PHONY : test.cpp.o
-
-test.i: test.cpp.i
-.PHONY : test.i
-
-# target to preprocess a source file
-test.cpp.i:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/test.cpp.i
-.PHONY : test.cpp.i
-
-test.s: test.cpp.s
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.cpp.s:
-	cd /home/enrico/Progetti/Nut_SQPnP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/test.cpp.s
-.PHONY : test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -354,13 +278,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SQPnP"
 	@echo "... create_marker"
-	@echo "... pnp"
+	@echo "... pnp_photo"
 	@echo "... pnp_video"
-	@echo "... read_markers"
-	@echo "... test"
-	@echo "... PnP.o"
-	@echo "... PnP.i"
-	@echo "... PnP.s"
+	@echo "... PnP_photo.o"
+	@echo "... PnP_photo.i"
+	@echo "... PnP_photo.s"
 	@echo "... PnP_video.o"
 	@echo "... PnP_video.i"
 	@echo "... PnP_video.s"
@@ -370,12 +292,6 @@ help:
 	@echo "... pnp_solver.o"
 	@echo "... pnp_solver.i"
 	@echo "... pnp_solver.s"
-	@echo "... read_markers.o"
-	@echo "... read_markers.i"
-	@echo "... read_markers.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 .PHONY : help
 
 

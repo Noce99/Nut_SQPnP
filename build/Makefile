@@ -130,19 +130,6 @@ SQPnP/fast:
 .PHONY : SQPnP/fast
 
 #=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-#=============================================================================
 # Target rules for targets named create_marker
 
 # Build rule for target.
@@ -156,30 +143,17 @@ create_marker/fast:
 .PHONY : create_marker/fast
 
 #=============================================================================
-# Target rules for targets named read_markers
+# Target rules for targets named pnp_photo
 
 # Build rule for target.
-read_markers: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_markers
-.PHONY : read_markers
+pnp_photo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pnp_photo
+.PHONY : pnp_photo
 
 # fast build rule for target.
-read_markers/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/read_markers.dir/build.make src/CMakeFiles/read_markers.dir/build
-.PHONY : read_markers/fast
-
-#=============================================================================
-# Target rules for targets named pnp
-
-# Build rule for target.
-pnp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pnp
-.PHONY : pnp
-
-# fast build rule for target.
-pnp/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp.dir/build.make src/CMakeFiles/pnp.dir/build
-.PHONY : pnp/fast
+pnp_photo/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pnp_photo.dir/build.make src/CMakeFiles/pnp_photo.dir/build
+.PHONY : pnp_photo/fast
 
 #=============================================================================
 # Target rules for targets named pnp_video
@@ -204,10 +178,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SQPnP"
 	@echo "... create_marker"
-	@echo "... pnp"
+	@echo "... pnp_photo"
 	@echo "... pnp_video"
-	@echo "... read_markers"
-	@echo "... test"
 .PHONY : help
 
 
