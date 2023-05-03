@@ -13,8 +13,8 @@
 #include <sys/types.h>
 #include "pnp_solver.cpp"
 
-#define DATA_PATH "../../resources/3D_points.data"
-#define IMAGE_PATH "./images/test_9.jpg"
+#define DATA_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/3D_points.data"
+#define IMAGE_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/test_image.jpg"
 
 int main () {
 
