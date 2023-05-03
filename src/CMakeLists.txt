@@ -30,5 +30,9 @@ set(sources_pnp PnP.cpp)
 add_executable(pnp ${sources_pnp})
 target_link_libraries( pnp ${OpenCV_LIBS} )
 
+set(sources_pnp PnP_video.cpp)
+add_executable(pnp_video ${sources_pnp})
+target_link_libraries( pnp_video ${OpenCV_LIBS} )
+
 # when other libraries or executables link to SQPnP
 target_include_directories (SQPnP PUBLIC ${INCLUDE_DIRS})   
