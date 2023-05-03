@@ -1,5 +1,3 @@
-add_library (SQPnP pnp_solver.cpp)
-
 add_definitions(-std=c++14)
 
 set(CXX_FLAGS "-Wall")
@@ -15,7 +13,6 @@ list(APPEND LIBS ${OpenCV_LIBS})
 
 include_directories(${INCLUDE_DIRS} )
 
-
 set(sources_create_marker create_marker.cpp)
 add_executable(create_marker ${sources_create_marker})
 target_link_libraries( create_marker ${OpenCV_LIBS} )
@@ -27,6 +24,3 @@ target_link_libraries( pnp_photo ${OpenCV_LIBS} )
 set(sources_pnp PnP_video.cpp)
 add_executable(pnp_video ${sources_pnp})
 target_link_libraries( pnp_video ${OpenCV_LIBS} )
-
-# when other libraries or executables link to SQPnP
-target_include_directories (SQPnP PUBLIC ${INCLUDE_DIRS})   
