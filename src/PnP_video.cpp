@@ -14,7 +14,7 @@
 #include "pnp_solver.cpp"
 
 #define DATA_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/3D_points.data"
-#define VIDEO_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/contorto_2.mp4"
+#define VIDEO_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/test_video.mp"
 #define OUTPUT_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/camera_positions.txt"
 #define OUTPUT_VIDEO_PATH "/home/enrico/Progetti/Nut_SQPnP/resources/video_with_BBs.avi"
 int main () {
