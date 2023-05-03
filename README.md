@@ -1,4 +1,4 @@
-# NutPnP
+# NutSQPnP
 
 ## Compiling
 
